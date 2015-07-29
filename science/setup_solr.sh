@@ -10,6 +10,6 @@ wget -O /articles.zip https://github.com/Ingenta/deploy/blob/master/science/arti
 unzip /articles.zip -d /docker_volume/solr/articles ;
 
 chgrp -R docker /docker_volume/solr/articles
-chmod -R g+w /docker_volume/solr/articles
+chmod -R 777 /docker_volume/solr/articles
 
 docker run -d -p 8983:8983 -v /docker_volume/solr/articles/:/opt/solr/server/solr/articles --name solr5 makuk66/docker-solr ;
