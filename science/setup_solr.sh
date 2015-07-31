@@ -1,4 +1,4 @@
-
+#!/bin/sh
 docker rm -f solr5;
 
 if [ -d /docker_volume/solr ]; then  rm -rf /docker_volume/solr ; fi 
